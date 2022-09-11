@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1> Formulario de Dev's </h1>
+    </header>
+
+    <main>
+        <!-- action é o local onde serao submitados os dados do formulario. method é como esses dados serao enviados sendo eles get e post. GET os dados sao enviados pela URL e POST sao enviados 'escondidos' -->
+        <form action="redirecionamento.html" method="post">
+            <!-- input é a tag qeu se insere dados para o formulario. Ela tem 3 atributos principais: type(tipo), name(nome) que onde o backend consegue pegar o valor desse campo e o id que é o identificador desse campo, geralmente utilizado no JS -->
+
+            <div>
+                <label for="nome" class="label">Nome:</label>
+                <input class="input" type="text" name="nome" id="nome" required  maxlength="10" placeholder="Nome completo" >
+            </div>
+
+           
+            
+            <div>
+                <label for="email" class="label">Email</label>
+                <input class="input" type="email" name="email" id="email">
+            </div>
+
+            <div>
+                <label for="" class="label">Endereço</label>
+                <input class="input" type="text" name="endereco" id="endereco">
+            </div>
+
+            <div>
+                <label for="" class="label">Data de nascimento</label>
+                <input type="date" name="" id="date">
+            </div>
+
+            <div class="sexo">
+                <!-- Input do tipo radio devem ter o mesmo name, pois é esse name que identifca o grupo de radio's. o valor que sera enviado para o backend sera o do atributo value -->
+                <p>Sexo:</p>
+                <label for="m">Masculino</label>
+                <input type="radio" name="sexo" id="m" value="M" >
+
+                <label for="f">Feminino</label>
+                <input type="radio" name="sexo" id="f" value="F" checked>
+            </div>
+
+            <div class="linguagens">
+                <!-- Checkbox é a mesma coisa do inut radio, a diferença é qeu voce pode selecionar varios checkboxes enquanto o radio é apenas 1 -->
+                <p>Linguagens que domina</p>
+
+                <label for="js">Javascript</label>
+                <input type="checkbox" name="linguagens" id="js" value="Javascript" checked>
+
+                <label for="java">Java</label>
+                <input type="checkbox" name="linguagens" id="java" value="java">
+
+                <label for="php">PHP</label>
+                <input type="checkbox" name="linguagens" id="php" value="PHP">
+
+                <label for="csharp"> C# </label>
+                <input type="checkbox" name="linguagens" id="csharp" value="csharp">
+            </div>
+
+            <div class="textarea">
+                <p>Fale sobre voce:</p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="submit">
+              <input type="submit" value="Cadastrar" id="button">  
+            </div>
+            
+
+
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
